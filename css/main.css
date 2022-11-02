@@ -1,0 +1,312 @@
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+* {
+  font-family: "Pretendard-Regular";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  min-width: 350px;
+}
+body a {
+  text-decoration: none;
+}
+
+nav.nav {
+  height: 100%;
+  width: 70px;
+  border-radius: 0;
+  background-color: #ececed;
+  position: fixed;
+  padding-top: 50px;
+}
+nav.nav ul.navList li.nav_btn {
+  text-align: center;
+  padding: 14px 0;
+}
+nav.nav ul.navList li.nav_btn a {
+  color: #777777;
+}
+nav.nav ul.navList li.nav_btn.active a {
+  color: #000;
+}
+
+.chats header {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 20px 20px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  z-index: 999;
+}
+.chats header h3.headerTitle {
+  font-size: 1.5em;
+}
+.chats header .headerMenu span {
+  height: 36px;
+  width: 36px;
+  border-radius: 18px;
+  display: inline-block;
+  text-align: center;
+  line-height: 36px;
+  cursor: pointer;
+}
+.chats header .headerMenu span:hover {
+  background-color: #ededed;
+}
+
+.loginContainer {
+  width: 100%;
+  height: 100%;
+  background-color: #2BC1BC;
+}
+
+.login {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 460px;
+  justify-content: center;
+}
+.login h1.loginLogo {
+  height: 90px;
+  width: 90px;
+  border-radius: 20px;
+  margin: 0 auto 20px;
+  background-image: url("../img/logo.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto 100%;
+}
+.login p.loginAccount {
+  font-size: 0.8em;
+  color: rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+.login p.loginAccount a {
+  color: #363636;
+}
+
+.loginForm {
+  width: 240px;
+  margin: 0 auto 80px;
+  font-size: 0.8em;
+}
+.loginForm input {
+  width: 240px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.loginForm input:focus {
+  outline: none;
+}
+.loginForm input:focus::-moz-placeholder {
+  font-size: 0;
+}
+.loginForm input:focus:-ms-input-placeholder {
+  font-size: 0;
+}
+.loginForm input:focus::placeholder {
+  font-size: 0;
+}
+.loginForm input::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.2);
+}
+.loginForm input:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.2);
+}
+.loginForm input::placeholder {
+  color: rgba(0, 0, 0, 0.2);
+}
+.loginForm .loginFormId {
+  border-radius: 3px 3px 0 0;
+  border-bottom: none;
+  padding-left: 10px;
+}
+.loginForm .loginFormPw {
+  border-radius: 0 0 3px 3px;
+  padding-left: 10px;
+  border-top: 1px solid #eee;
+  margin-bottom: 7px;
+}
+.loginForm .loginFormBtn {
+  color: #777777;
+  height: 35px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.loginForm .loginFormBtn:hover {
+  background-color: #333333;
+  color: #fff;
+}
+.loginForm .loginFormCheck {
+  width: 20px;
+  vertical-align: middle;
+}
+.loginForm label {
+  color: #363636;
+}
+
+.chats {
+  margin-left: 70px;
+}
+
+a.previewWrap {
+  color: #111;
+  display: block;
+}
+a.previewWrap:hover {
+  background-color: #f1f1f1;
+}
+a.previewWrap:first-child > .preview {
+  background-color: #f7f7f7;
+}
+
+.chat {
+  height: 100%;
+  width: 100%;
+  border-radius: 0;
+}
+.chat .chatScreen {
+  height: calc(100% - 140px);
+  overflow: auto;
+}
+.chat .chatScreen .chatScreenBar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.chat .chatScreen .chatScreenBar .chatUser {
+  background-color: #bacee0;
+}
+
+section.bubbleContainer {
+  background-color: #bacee0;
+  padding-top: 20px;
+}
+section.bubbleContainer .preview .bubbleWrap {
+  display: flex;
+  align-items: flex-end;
+}
+section.bubbleContainer .preview .bubbleWrap .bubbleContent {
+  width: 80%;
+  max-width: 700px;
+}
+section.bubbleContainer .preview .bubbleWrap .bubbleContent .chat_nick {
+  font-size: 1em;
+}
+section.bubbleContainer .preview .bubbleWrap .bubbleTime {
+  font-size: 0.7em;
+  padding-left: 6px;
+}
+
+.chatForm {
+  background: #fff;
+  height: 110px;
+  padding: 10px;
+}
+.chatForm .chatFormField textarea.chatFormMsg {
+  height: 75px;
+  width: 100%;
+  border-radius: 0;
+  border: none;
+  resize: none;
+  outline: none;
+}
+.chatForm .chatFormUtil {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+}
+.chatForm .chatFormUtil .chatFormUtilPlugin i {
+  color: #999;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.chatForm .chatFormUtil .chatFormUtilPlugin i:hover {
+  color: #111;
+}
+.chatForm .chatFormUtil .chatFormUtilSubmit input {
+  height: 30px;
+  width: 60px;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  background-color: #2BC1BC;
+}
+
+.preview {
+  display: flex;
+  padding: 16px;
+  position: relative;
+}
+.preview .previewColumn .preview_pic {
+  height: 50px;
+  width: 50px;
+  border-radius: 16px;
+  background-color: #333333;
+  margin-right: 10px;
+}
+.preview .previewColumn .preview_nick {
+  width: 50vw;
+  font-size: 0.9em;
+  margin-bottom: 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.preview .previewColumn .preview_msg {
+  width: 50vw;
+  font-size: 0.85em;
+  color: #363636;
+  display: -webkit-box;
+  word-wrap: break-word;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.preview .previewColumn .preview_time {
+  position: absolute;
+  right: 16px;
+  top: 10px;
+  color: #777777;
+  font-size: 0.7em;
+}
+
+.bubble {
+  height: auto;
+  width: 100%;
+  border-radius: 4px;
+  background-color: #fff;
+  position: relative;
+  box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  font-size: 0.9em;
+}
+.bubble::before {
+  content: "";
+  height: 0;
+  width: 0;
+  border-radius: 0;
+  position: absolute;
+  left: -10px;
+  top: 10px;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid #fff;
+}

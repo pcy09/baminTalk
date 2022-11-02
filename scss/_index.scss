@@ -1,0 +1,81 @@
+.loginContainer{
+    width:100%;
+    height:100%;
+    background-color: $bgColor;
+}
+.login{
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 460px;
+    justify-content: center;
+    h1.loginLogo{
+        height:90px;
+        width:90px;
+        border-radius: 20px;
+        margin:0 auto 20px;;
+        background: {
+            image:url('../img/logo.jpg');   //컴파일 된 이후의 경로 기준
+            repeat:no-repeat;
+            position:center;
+            size:auto 100%;
+        }
+    }
+    p.loginAccount{
+        font-size: 0.8em;
+        color:$opacityBlack;
+        text-align: center;
+        a{
+            color:$gray1;
+        }
+    }
+}
+.loginForm{
+    width:240px;
+    margin: 0 auto 80px;
+    font-size: 0.8em;
+    input{
+        width:240px;
+        height:30px;
+        border:1px solid $opacityBlack;
+        &:focus{
+            outline: none;
+            &::placeholder{
+                font-size: 0;
+            }
+        }
+        &::placeholder{
+            color:$opacityBlack;
+        }
+    }
+    .loginFormId{
+        border-radius: 3px 3px 0 0;
+        border-bottom: none;
+        padding-left:10px;
+    }
+    .loginFormPw{
+        border-radius: 0 0 3px 3px;
+        padding-left:10px;
+        border-top: 1px solid #eee;
+        margin-bottom: 7px;
+    }
+    .loginFormBtn{
+        color:$gray2 ;
+        height:35px;
+        margin-bottom: 10px;
+        cursor: pointer;
+        &:hover{
+            background-color: $mainColor;
+            color:#fff;
+        }
+    }
+    .loginFormCheck{
+        width:20px;
+        vertical-align: middle;
+        // appearance: unset;   //기본설정이 되어있는 모양을 다 없애줌
+    }
+    label{
+        color:$gray1;
+    }
+    
+}

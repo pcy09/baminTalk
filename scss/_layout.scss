@@ -1,0 +1,46 @@
+nav.nav{
+    @include set-box(100%, 70px);
+    background-color:#ececed;
+    position: fixed;
+    padding-top: 50px;
+    ul.navList{
+        li.nav_btn{
+            text-align: center;
+            padding:14px 0;
+            a{
+                color:$gray2;
+            }
+            &.active{
+                a{
+                    color:#000;
+                }
+            }
+        }
+    }
+}
+.chats{
+    header{
+        display: flex;
+        justify-content: space-between;
+        padding:50px 20px 20px;
+        position: sticky;
+        top:0;
+        background-color: #fff;
+        z-index:999;
+        h3.headerTitle{
+            font-size: 1.5em;
+        }
+        .headerMenu{
+            span{
+                @include set-box(36px, 36px, 18px);
+                display: inline-block;
+                text-align: center;
+                line-height: 36px;
+                cursor: pointer;
+                &:hover{
+                    background-color: $gray3;
+                }
+            }
+        }
+    }
+}

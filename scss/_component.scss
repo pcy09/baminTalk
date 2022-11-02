@@ -1,0 +1,57 @@
+.preview{
+    display: flex;
+    padding:16px;
+    position: relative;
+    .previewColumn{
+        .preview_pic{
+            @include set-box(50px, 50px, 16px);
+            background-color:$mainColor;
+            margin-right: 10px;
+        }
+        .preview_nick{
+            width:50vw;
+            font-size: 0.9em;
+            margin-bottom: 6px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .preview_msg{
+            width:50vw;
+            font-size: 0.85em;
+            color:$gray1;
+
+            // 텍스트 2줄만 보이게 하기
+            display: -webkit-box;
+            word-wrap: break-word;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .preview_time{
+            position: absolute;
+            right:16px;
+            top:10px;
+            color:$gray2;
+            font-size: 0.7em;
+        }
+    }
+}
+
+.bubble{
+    @include set-box(auto, 100%,4px);
+    background-color: #fff;
+    position: relative;
+    box-shadow: 5px 5px 3px $opacityBlack;
+    padding:10px;
+    font-size: 0.9em;
+    &::before{
+        content:'';
+        @include set-box(0, 0);
+        position: absolute;
+        left:-10px;
+        top:10px;
+        border-bottom:10px solid transparent;
+        border-right:10px solid #fff;
+    }
+}
